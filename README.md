@@ -7,6 +7,8 @@ int l_sensor= 3; //left sensor
 int r_sensor= 4; // right sensor
 int speed= 50; // speed
 int pause= 200; //stop
+int slow=10
+int top_hat=100
 
 //Function Definitions
 void forward(){
@@ -15,29 +17,33 @@ printf("moving forward \n");
     motor(l_motor,speed);
 }
 
-void turn(){
-printf("turning")
-motor (l_sensor, speed);
+void veer_right(){
+motor (l_motor, speed);
+motor (r_motor, slow);
+
+}
+
+void veer_left(){
+motor (l_motor, slow)
+motor(r_motor, speed)
 
 }
 {
 int main(){
 
-while (r_sensor)==0) {    // wall in view continue moving forward;}
+while (r_sensor)==4) {    // Right sensor pressed veer left;}
+veer();
+
+}
+int main(){
+while (l_sensor)==3 {    // Left sensor isn't pressed
 forward();
-}
-}
-}
-int main(){
-while (l_sensor)==0 {    // wall in view turn
-turn();
 
 }
 }
 
 {
-If(l_sensor touches the wall turn left);
-}
-{
-If(r_sensor touches the wall continue moving);
+If(top_hat)<100) {   // It reches the black line veer right.;}
+
+
 }
